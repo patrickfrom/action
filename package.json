@@ -4,6 +4,7 @@
   "description": "Github Action Test",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/patrickfrom/action/issues"
   },
-  "homepage": "https://github.com/patrickfrom/action#readme"
+  "homepage": "https://github.com/patrickfrom/action#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nextjs": "^0.0.3"
+  }
 }
