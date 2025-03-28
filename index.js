@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-let server;
+let server = null; // Store the server instance
 
 if (require.main === module) {
   server = app.listen(port, () => {
@@ -14,4 +14,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { app, server };
+module.exports = { app, startServer: () => server = app.listen(port), stopServer: () => server?.close() };

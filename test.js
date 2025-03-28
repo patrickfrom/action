@@ -1,8 +1,12 @@
 const request = require('supertest');
-const { app, server } = require('./index'); // Import both app and server
+const { app, startServer, stopServer } = require('./index');
+
+beforeAll(() => {
+  startServer();
+});
 
 afterAll(() => {
-  server.close(); // Close the server after tests finish
+  stopServer();
 });
 
 test('GET / should return Hello World!', async () => {
