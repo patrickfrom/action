@@ -35,5 +35,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: 2222
-          source: "/*"
+          source: "./*"
           target: ${{ secrets.FTP_TARGET_DIR }}
+          tar_exec: false
+          debug: true
